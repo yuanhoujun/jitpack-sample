@@ -36,7 +36,29 @@ git push origin master --tags
 ```
 
 ### e）使用Github账号登录JitPack，按照下图操作
-![]()
+![](https://raw.githubusercontent.com/yuanhoujun/jitpack-sample/master/images/jitpack.png)
 
 点击Get it会直接进入构建阶段，等待构建完成后，确保第二处位置的图标显示为绿色，即表示构建成功。如果显示为构建失败，点击图标查看失败原因。
 请修改后尝试再次构建。
+
+### f）以上操作完成后，就可以在你的其它工程使用maven依赖引用了。
+本篇例子引用方式如下：
+
+1）增加JitPack库链接到你的根目录build.gradle文件中
+
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+2）在你的主工程中添加如下依赖
+
+```
+dependencies {
+	  compile 'com.github.yuanhoujun:jitpack-sample:1.0.0'
+}
+```
