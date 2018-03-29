@@ -62,3 +62,9 @@ dependencies {
 	  compile 'com.github.yuanhoujun:jitpack-sample:1.0.0'
 }
 ```
+
+3）尝试调用库工程API，测试工作是否正常
+
+```
+ JitPack.get().pack();
+```
